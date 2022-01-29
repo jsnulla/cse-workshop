@@ -6,7 +6,7 @@
 
 This folder contains basic code that let's you use puppeteer to control Chrome, and take a full page screenshot of a site
 
-### Commands
+#### Commands
 `npm run start` will execute the code below, and run our puppeteer script
 
 `npx ts-node index.ts`
