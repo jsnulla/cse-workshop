@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  .row
+    .col
+      h1= title
+      p Welcome to #{title}
+      p We are going to use this site as a testing ground / blast site for our puppeteer learning!
+
+  .row.mt-4
+    .col
+      h3 Reviews
+
+      .review-container
+        .review-listing
+          .review.card.my-4
+            .card-body
+              h5.card-title Batman
+              h6.card-subtitle.text-muted 2 out of 5
+              br
+              p.card-text Not enough jokes, please bring joker back.
+            .card-footer.text-muted
+              span Posted on: Jan 01, 1970
+
+          .review.card.my-4
+            .card-body
+              h5.card-title Joker
+              h6.card-subtitle.text-muted 5 out of 5
+              br
+              p.card-text No bats in sight! What a wonderful place! Thanks to Migz for this suggestion!
+            .card-footer.text-muted
+              span Posted on: Nov 18, 1969
+
+          .review.card.my-4
+            .card-body
+              h5.card-title Lucy
+              h6.card-subtitle.text-muted 5 out of 5
+              br
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              p#review-3.collapse Pellentesque pellentesque euismod tortor ut bibendum. Quisque porttitor, velit vel ultrices facilisis, sapien urna suscipit purus, sit amet dignissim mi tortor sit amet leo. Duis vitae lacinia dolor. Pellentesque dapibus justo nec euismod finibus. Suspendisse posuere tortor sed odio viverra, ut tristique nibh egestas. Aliquam eget tellus purus. Maecenas cursus maximus nisl, consequat porttitor magna hendrerit eu. Donec sed dignissim arcu. Nam tincidunt est mauris, eget ultrices turpis commodo volutpat. Nam fringilla pretium nisi vehicula ullamcorper. In posuere sit amet sapien eu scelerisque. Vestibulum luctus est faucibus tempor porta. In et ullamcorper magna. Sed sagittis finibus erat, et lacinia nisi rutrum et. Proin eu ex vel enim fringilla suscipit pretium vitae odio. Pellentesque sit amet risus vitae eros lobortis condimentum.
+              button.btn.btn-primary(data-bs-toggle='collapse', href='#review-3', role='button', aria-expanded='false', aria-controls='review-3') Toggle full review
+            .card-footer.text-muted
+              span Posted on: Jan 01, 0000
+
