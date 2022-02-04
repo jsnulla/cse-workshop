@@ -15,13 +15,23 @@ const main = async () => {
 
   console.log('Typing email');
   const emailInput = await page.$('input[name="email"]');
-  await TypeRealistic(emailInput, 'jasonn@referralcandy.com');
+  await TypeRealistic(emailInput, 'jasonn@referralcandy.com', {
+    minimumDelay: 35,
+    maximumDelay: 200,
+    minimumTypos: 1,
+    maximumTypos: 2,
+  });
 
   console.log('Typing password');
   const password = crypto.randomBytes(16).toString('hex');
   const passwordInput = await page.$('input[name="password"]');
   console.log('Password to type', password);
-  await TypeRealistic(passwordInput, password);
+  await TypeRealistic(passwordInput, password, {
+    minimumDelay: 40,
+    maximumDelay: 350,
+    minimumTypos: 1,
+    maximumTypos: 6,
+  });
   await passwordInput.press('Enter');
   console.log('Loggin in');
 
@@ -31,6 +41,7 @@ const main = async () => {
   const newUrl = await page.url();
   console.log('Dashboard URL', newUrl);
 
+  await page.waitForTimeout(1000);
   await browser.close();
 };
 
